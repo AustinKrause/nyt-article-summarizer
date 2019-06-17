@@ -12,8 +12,11 @@ Flatiron School Mod 5 Final Project
 
 ## Exploratory Data Analysis
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
-ADD PICTURE OF DATAFRAME PREVIEW HERE<br>
-After cutting out extrememly large and small articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
+<img src='Images/inital_df_preview.png'><br>
+<br>A look at the languages of each article: </br>
+<img src='Images/language_breakdown.png'><br>
+
+After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
 
 ## K-Means Clustering
 <br>
@@ -29,7 +32,7 @@ In order to preprocess the text data for K-Means, a number of initial steps have
  </ul>
 To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up early on in the text. After fitting a number of K-Means models, I settled on using the model with 12 clusters.
 <br><br>
-INSERT PICTURE OF CLUSTER DIST HERE<br>
+<img src='Images/kmeans12_cluster_distributions.png'><br>
 ## K-Means (12) clustering results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
