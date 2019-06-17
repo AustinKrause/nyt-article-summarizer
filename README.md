@@ -27,24 +27,24 @@ In order to preprocess the text data for K-Means, a number of initial steps have
   <li>Perform Count Vectorization and remove stop words</li>
   <li>Transform list of strings with TF-IDF transformation</li>
  </ul>
-To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up within it's first paragraph. After fitting many K-Means models, I settled on using the model with 12 clusters.
+To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up early on in the text. After fitting a number of K-Means models, I settled on using the model with 12 clusters.
 <br><br>
 INSERT PICTURE OF CLUSTER DIST HERE<br>
 ## K-Means (12) clustering results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
-  <li>Cluster 0: state, new, year, president, people, nation, one, unit, country, govern</li>
-  <li>Cluster 1: Trump, president, Donald, would, white, house, campaign, American, Washington, administration, nation</li>
-  <li>Cluster 2: Trump, republican, party, Donald, democrat, presidential, senate, candidate, GOP, voter, nominee</li>
-  <li>Cluster 3: one, year, new, first, world, game, live, week, people, make, get, say, work, show</li>
-  <li>Cluster 4: Clinton, Hillary, Trump, democrat, campaign, Sanders, presidential, election, emails, Bernie, support</li>
-  <li>Cluster 5: Trump, Russia, investigation, intelligence, comey, election, director, Putin, Flynn</li>
-  <li>Cluster 6: school, student, university, education, year, teacher, class, week, graduate</li>
-  <li>Cluster 7: court, supreme, justice, judge, rule, federal, senate, law, appeal, Obama, legal</li>
-  <li>Cluster 8: republican, care, health, house, bill, Trump, act, senate, Obamacare, president, insurance, reform</li>
-  <li>Cluster 9: please, story, great, need, write, continue, step, block, display, extend, part, idea</li>
-  <li>Cluster 10: company, year, percent, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
-  <li>Cluster 11: police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
+  <li><b>Cluster 0:</b> state, new, year, president, people, nation, one, unit, country, govern</li>
+  <li><b>Cluster 1:</b> Trump, president, Donald, would, white, house, campaign, American, Washington, administration, nation</li>
+  <li><b>Cluster 2:</b> Trump, republican, party, Donald, democrat, presidential, senate, candidate, GOP, voter, nominee</li>
+  <li><b>Cluster 3:</b> one, year, new, first, world, game, live, week, people, make, get, say, work, show</li>
+  <li><b>Cluster 4:</b> Clinton, Hillary, Trump, democrat, campaign, Sanders, presidential, election, emails, Bernie, support</li>
+  <li><b>Cluster 5:</b> Trump, Russia, investigation, intelligence, comey, election, director, Putin, Flynn</li>
+  <li><b>Cluster 6:</b> school, student, university, education, year, teacher, class, week, graduate</li>
+  <li><b>Cluster 7:</b> court, supreme, justice, judge, rule, federal, senate, law, appeal, Obama, legal</li>
+  <li><b>Cluster 8:</b> republican, care, health, house, bill, Trump, act, senate, Obamacare, president, insurance, reform</li>
+  <li><b>Cluster 9:</b> please, story, great, need, write, continue, step, block, display, extend, part, idea</li>
+  <li><b>Cluster 10:</b> company, year, percent, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
+  <li><b>Cluster 11:</b> police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
 ## Analyzing the clusters
