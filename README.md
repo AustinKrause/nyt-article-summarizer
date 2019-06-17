@@ -17,7 +17,7 @@ After cutting out extrememly large and small articles, I ended with a datset of 
 
 ## K-Means Clustering
 <br>
-### Preprocessing
+## Preprocessing
 In order to preprocess the text data for K-Means, a number of initial steps have to be taken:<br>
 <ul>
   <li>Tokenize words</li>
@@ -28,9 +28,9 @@ In order to preprocess the text data for K-Means, a number of initial steps have
   <li>Transform list of strings with TF-IDF transformation</li>
  </ul>
 To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up within it's first paragraph. After fitting many K-Means models, I settled on using the model with 12 clusters.
-<br>
+<br><br>
 INSERT PICTURE OF CLUSTER DIST HERE<br>
-### K-Means (12) clustering results
+## K-Means (12) clustering results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
   <li>Cluster 0: state, new, year, president, people, nation, one, unit, country, govern</li>
@@ -47,7 +47,7 @@ A preview of the top words in each cluster is below:<br>
   <li>Cluster 11: police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
-### Analyzing the clusters
+## Analyzing the clusters
 Looking through the article clusters, a number of things stand out:
 <ul>
   <li>Clusters 0, 1 and 2 seems to be mainly political and it looks like clusters 1 and 2 mainly lean towards articles regarding the republication election campaign. Cluster 0 seems to be quite broad politically.</li>
