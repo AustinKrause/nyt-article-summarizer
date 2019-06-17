@@ -12,12 +12,15 @@ Flatiron School Mod 5 Final Project
 
 ## Exploratory Data Analysis
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
-ADD PICTURE OF DATAFRAME PREVIEW HERE<br>
-After cutting out extrememly large and small articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
+<img src='Images/inital_df_preview.png'><br>
+<br>A look at the languages of each article: </br>
+<img src='Images/language_breakdown.png'><br>
+
+After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
 
 ## K-Means Clustering
 <br>
-### Preprocessing
+## Preprocessing
 In order to preprocess the text data for K-Means, a number of initial steps have to be taken:<br>
 <ul>
   <li>Tokenize words</li>
@@ -27,31 +30,31 @@ In order to preprocess the text data for K-Means, a number of initial steps have
   <li>Perform Count Vectorization and remove stop words</li>
   <li>Transform list of strings with TF-IDF transformation</li>
  </ul>
-To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up within it's first paragraph. After fitting many K-Means models, I settled on using the model with 12 clusters.
-<br>
-INSERT PICTURE OF CLUSTER DIST HERE<br>
-### K-Means (12) clustering results
+To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up early on in the text. After fitting a number of K-Means models, I settled on using the model with 12 clusters.
+<br><br>
+<img src='Images/kmeans12_cluster_distributions.png'><br>
+## K-Means (12) Clustering Results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
-  <li>Cluster 0: state, new, year, president, people, nation, one, unit, country, govern</li>
-  <li>Cluster 1: Trump, president, Donald, would, white, house, campaign, American, Washington, administration, nation</li>
-  <li>Cluster 2: Trump, republican, party, Donald, democrat, presidential, senate, candidate, GOP, voter, nominee</li>
-  <li>Cluster 3: one, year, new, first, world, game, live, week, people, make, get, say, work, show</li>
-  <li>Cluster 4: Clinton, Hillary, Trump, democrat, campaign, Sanders, presidential, election, emails, Bernie, support</li>
-  <li>Cluster 5: Trump, Russia, investigation, intelligence, comey, election, director, Putin, Flynn</li>
-  <li>Cluster 6: school, student, university, education, year, teacher, class, week, graduate</li>
-  <li>Cluster 7: court, supreme, justice, judge, rule, federal, senate, law, appeal, Obama, legal</li>
-  <li>Cluster 8: republican, care, health, house, bill, Trump, act, senate, Obamacare, president, insurance, reform</li>
-  <li>Cluster 9: please, story, great, need, write, continue, step, block, display, extend, part, idea</li>
-  <li>Cluster 10: company, year, percet, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
-  <li>Cluster 11: police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
+  <li><b>Cluster 0:</b> state, new, year, president, people, nation, one, unit, country, govern</li>
+  <li><b>Cluster 1:</b> Trump, president, Donald, would, white, house, campaign, American, Washington, administration, nation</li>
+  <li><b>Cluster 2:</b> Trump, republican, party, Donald, democrat, presidential, senate, candidate, GOP, voter, nominee</li>
+  <li><b>Cluster 3:</b> one, year, new, first, world, game, live, week, people, make, get, say, work, show</li>
+  <li><b>Cluster 4:</b> Clinton, Hillary, Trump, democrat, campaign, Sanders, presidential, election, emails, Bernie, support</li>
+  <li><b>Cluster 5:</b> Trump, Russia, investigation, intelligence, comey, election, director, Putin, Flynn</li>
+  <li><b>Cluster 6:</b> school, student, university, education, year, teacher, class, week, graduate</li>
+  <li><b>Cluster 7:</b> court, supreme, justice, judge, rule, federal, senate, law, appeal, Obama, legal</li>
+  <li><b>Cluster 8:</b> republican, care, health, house, bill, Trump, act, senate, Obamacare, president, insurance, reform</li>
+  <li><b>Cluster 9:</b> please, story, great, need, write, continue, step, block, display, extend, part, idea</li>
+  <li><b>Cluster 10:</b> company, year, percent, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
+  <li><b>Cluster 11:</b> police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
-### Analyzing the clusters
+## Analyzing the Clusters
 Looking through the article clusters, a number of things stand out:
 <ul>
   <li>Clusters 0, 1 and 2 seems to be mainly political and it looks like clusters 1 and 2 mainly lean towards articles regarding the republication election campaign. Cluster 0 seems to be quite broad politically.</li>
-  <li>Cluster 3 looks extremely broad as well, and it is also the largest cluster BY FAR. This could be due to the fact that there are a large amount of articles in the dataset that have a wide range of topics.</li>
+  <li>Cluster 3 looks extremely broad as well, and it is also the largest cluster BY FAR. This could be due to the fact that there are a large amount of articles in the dataset that have a wide range of topics. After testing my classification model, it looks like most sports articles will end up being classified as cluster 3.</li>
   <li>Cluster 4 is quite strong and it is mainly based on articles about the democratic party and Hillary Clinton</li>
   <li>Cluster 5 is specifically related to articles written about Russian meddling in the 2016 election </li>
   <li>Cluster 6 shows a strong relation to articles written about schooling</li>
@@ -62,3 +65,12 @@ Looking through the article clusters, a number of things stand out:
   <li>Cluster 11 to me is the most impressive, this cluster seems to be built around police, military and foreign conflicts</li>
 </ul>
 
+<b>Further Clustering:<br>
+After noticing the size and proportion of cluster #3, I had the inclination to re cluster the rows within it. As it turns out, Each cluster created from cluster #3 was soley devoted around Donald Trump and the election. Because of this, I decided not to include my reclustering into my model, instead I left cluster #3 as it is. As it turns out, the top words for cluster #3 were misleading, although I reached an answer after digging deeper. This cluster still remains broad but it seems that it is centered politically as well.<br><br></b>
+
+## Classification Models Using K-Means Clusters
+INSERT PICTURE OF ACCURACIES HERE
+
+## Cosine-Similarity Text Summarizer
+
+## Going Forward
