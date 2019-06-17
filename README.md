@@ -62,3 +62,5 @@ Looking through the article clusters, a number of things stand out:
   <li>Cluster 11 to me is the most impressive, this cluster seems to be built around police, military and foreign conflicts</li>
 </ul>
 
+Further Clustering:<br>
+After noticing the size and proportion of cluster #3, I had the inclination to re cluster the rows within it. As it turns out, Each cluster created from cluster #3 was soley devoted around Donald Trump and the election. Because of this, I decided not to include my reclustering into my model, instead I left cluster #3 as it is. As it turns out, the top words for cluster #3 were misleading, although I reached an answer after digging deeper.<br><br>
