@@ -33,7 +33,7 @@ In order to preprocess the text data for K-Means, a number of initial steps have
 To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up early on in the text. After fitting a number of K-Means models, I settled on using the model with 12 clusters.
 <br><br>
 <img src='Images/kmeans12_cluster_distributions.png'><br>
-## K-Means (12) clustering results<br>
+## K-Means (12) Clustering Results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
   <li><b>Cluster 0:</b> state, new, year, president, people, nation, one, unit, country, govern</li>
@@ -50,7 +50,7 @@ A preview of the top words in each cluster is below:<br>
   <li><b>Cluster 11:</b> police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
-## Analyzing the clusters
+## Analyzing the Clusters
 Looking through the article clusters, a number of things stand out:
 <ul>
   <li>Clusters 0, 1 and 2 seems to be mainly political and it looks like clusters 1 and 2 mainly lean towards articles regarding the republication election campaign. Cluster 0 seems to be quite broad politically.</li>
@@ -67,3 +67,10 @@ Looking through the article clusters, a number of things stand out:
 
 <b>Further Clustering:<br>
 After noticing the size and proportion of cluster #3, I had the inclination to re cluster the rows within it. As it turns out, Each cluster created from cluster #3 was soley devoted around Donald Trump and the election. Because of this, I decided not to include my reclustering into my model, instead I left cluster #3 as it is. As it turns out, the top words for cluster #3 were misleading, although I reached an answer after digging deeper. This cluster still remains broad but it seems that it is centered politically as well.<br><br></b>
+
+## Classification Models Using K-Means Clusters
+INSERT PICTURE OF ACCURACIES HERE
+
+## Cosine-Similarity Text Summarizer
+
+## Going Forward
