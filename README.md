@@ -51,7 +51,7 @@ A preview of the top words in each cluster is below:<br>
 Looking through the article clusters, a number of things stand out:
 <ul>
   <li>Clusters 0, 1 and 2 seems to be mainly political and it looks like clusters 1 and 2 mainly lean towards articles regarding the republication election campaign. Cluster 0 seems to be quite broad politically.</li>
-  <li>Cluster 3 looks extremely broad as well, and it is also the largest cluster BY FAR. This could be due to the fact that there are a large amount of articles in the dataset that have a wide range of topics.</li>
+  <li>Cluster 3 looks extremely broad as well, and it is also the largest cluster BY FAR. This could be due to the fact that there are a large amount of articles in the dataset that have a wide range of topics. After testing my classification model, it looks like most sports articles will end up being classified as cluster 3.</li>
   <li>Cluster 4 is quite strong and it is mainly based on articles about the democratic party and Hillary Clinton</li>
   <li>Cluster 5 is specifically related to articles written about Russian meddling in the 2016 election </li>
   <li>Cluster 6 shows a strong relation to articles written about schooling</li>
