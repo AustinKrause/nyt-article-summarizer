@@ -43,7 +43,7 @@ A preview of the top words in each cluster is below:<br>
   <li>Cluster 7: court, supreme, justice, judge, rule, federal, senate, law, appeal, Obama, legal</li>
   <li>Cluster 8: republican, care, health, house, bill, Trump, act, senate, Obamacare, president, insurance, reform</li>
   <li>Cluster 9: please, story, great, need, write, continue, step, block, display, extend, part, idea</li>
-  <li>Cluster 10: company, year, percet, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
+  <li>Cluster 10: company, year, percent, U.S., market, billion, bank, price, rate, stock, investor, share, report, oil</li>
   <li>Cluster 11: police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
