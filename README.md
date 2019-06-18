@@ -19,11 +19,11 @@ Data was obtained from Components.com, it included over 200k news articles from 
 <p align="center">
   <img src='Images/language_breakdown.png'><br>
 </p>
-After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
+After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 97k articles, still a pretty good size to train with.
 
 ## K-Means Clustering
 <br>
-## Preprocessing
+<b>Preprocessing</b><br>
 In order to preprocess the text data for K-Means, a number of initial steps have to be taken:<br>
 <ul>
   <li>Tokenize words</li>
@@ -77,6 +77,7 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 <p align="center">
   <img src='Images/classification_model_accuracies.png'><br>
 </p>
+<br>
 ## Cosine-Similarity Text Summarizer
 
 ## Going Forward
