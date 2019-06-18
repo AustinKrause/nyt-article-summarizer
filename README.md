@@ -1,4 +1,3 @@
-
 <h1>TLDR; A News Article Summarization and Classification Tool</h1>
 Flatiron School Mod 5 Final Project
 
@@ -16,12 +15,19 @@ Data was obtained from Components.com, it included over 200k news articles from 
 
 <p align="center">
   <img src='Images/inital_df_preview.png'><br>
+  Preview of dataframe
 </p> 
 
-<br>A look at the languages of each article: </br>
 <p align="center">
   <img src='Images/language_breakdown.png'><br>
+  A look at the languages of each article: 
 </p>
+
+<p align="center">
+  <img src='Images/dist_artilce_len.png'><br>
+  Distribution of article length (in characters)
+</p>
+
 After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 97k articles, still a pretty good size to train with.
 
 <h2>K-Means Clustering</h2>
@@ -82,14 +88,13 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 </p>
 <br>
 
-
 <h2>Cosine-Similarity Text Summarizer</h2>
 <p>
   TF-IDF (Term Frequency - Inverse Document Frequency) gives weights to individual words based on their uniqueness compared to the document's overall vocabulary. Words with higher weights (more unique) often have more importance or provide more meaning to the document. To use this, I built a function that takes in an articles text, tokenizes each sentence (dataframe rows), creates a vocabulary without stopwords for the individual document (dataframe columns) and finally gives TF-IDF weights to each individual word in the vocab for each sentence. A preview is given below for a short text snippet. 
 </p>
 
 <p align="center">
-  <img src='Images/tf-idf_cosine_sim.png'><br>
+  <img src='Images/tf-idf_cosine_sim.png'><br><br>
 </p>
 
 <p>
@@ -97,15 +102,15 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 </p>
 
 <p align="center">
-  <img src='Images/sentence_cosine_similarities.png'><br>
+  <img src='Images/sentence_cosine_similarities.png'><br><br>
 </p>
 
 <p>
-  Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest average. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
+  Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest averages. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
 </p>
 
 <p>
-  For simplicity, the amount of sentences that are returned for the summarization is equal to the square root of the number of sentences in the article. 
+  For simplicity, the amount of sentences that are returned for the summarization is equal to the square root (rounded up to the nearest integer) of the number of sentences in the article. 
 </p>
 
 <h2>Going Forward</h2>
