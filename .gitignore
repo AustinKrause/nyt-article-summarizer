@@ -108,4 +108,5 @@ venv.bak/
 *.csv
 
 #notebooks
-*scratch_notebook.ipynb
+scratch_notebook.ipynb
+.DS_Store
