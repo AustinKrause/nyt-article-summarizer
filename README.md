@@ -1,4 +1,4 @@
-<h1>TLDR; A News Article Summarization and Classification Tool</h1>
+<h1>TLDR: A News Article Summarization and Classification Tool</h1>
 Flatiron School Mod 5 Final Project
 
 <h2>Project Goals:</h2>
