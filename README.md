@@ -14,18 +14,18 @@ Flatiron School Mod 5 Final Project
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
 
 <p align="center">
+  Preview of dataframe<br>
   <img src='Images/inital_df_preview.png'><br>
-  Preview of dataframe
 </p> 
 
 <p align="center">
+    A look at the languages of each article<br>
   <img src='Images/language_breakdown.png'><br>
-  A look at the languages of each article: 
 </p>
 
 <p align="center">
+    Distribution of article length (in characters)<br>
   <img src='Images/dist_artilce_len.png'><br>
-  Distribution of article length (in characters)
 </p>
 
 After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 97k articles, still a pretty good size to train with.
