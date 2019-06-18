@@ -10,7 +10,7 @@ Flatiron School Mod 5 Final Project
   <li>Perform pairwise cosine similarity on an article from user input to obtain extractive text summarization</li>
 </ul>
 
-<h2>Exploratory Data Analysis</h2>
+<h2>Dataset Analysis</h2>
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
 
 <p align="center">
