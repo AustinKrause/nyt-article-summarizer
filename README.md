@@ -17,12 +17,12 @@ Data was obtained from Components.com, it included over 200k news articles from 
   Preview of dataframe<br>
   <img src='Images/inital_df_preview.png'><br>
 </p> 
-
+<br>
 <p align="center">
     A look at the languages of each article<br>
   <img src='Images/language_breakdown.png'><br>
 </p>
-
+<br>
 <p align="center">
     Distribution of article length (in characters)<br>
   <img src='Images/dist_artilce_len.png'><br>
