@@ -88,6 +88,9 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 </p>
 <br>
 
+<p>Using the clusters created by the K-Means algorithm, I trained multiple models to try to classify which cluster a new article will be put into. The overall top performer was XGBoost which gave a test accuracy of 75.6%. Somewhat surprisingly, the bag of words neural network that I trained was outperformed by logistic regression and XGBoost.
+
+
 <h2>Cosine-Similarity Text Summarizer</h2>
 <p>
   TF-IDF (Term Frequency - Inverse Document Frequency) gives weights to individual words based on their uniqueness compared to the document's overall vocabulary. Words with higher weights (more unique) often have more importance or provide more meaning to the document. To use this, I built a function that takes in an articles text, tokenizes each sentence (dataframe rows), creates a vocabulary without stopwords for the individual document (dataframe columns) and finally gives TF-IDF weights to each individual word in the vocab for each sentence. A preview is given below for a short text snippet. 
@@ -106,7 +109,7 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 </p>
 
 <p>
-  Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest averages. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
+Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest averages. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
 </p>
 
 <p>
