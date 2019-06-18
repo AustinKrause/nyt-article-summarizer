@@ -12,10 +12,13 @@ Flatiron School Mod 5 Final Project
 
 ## Exploratory Data Analysis
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
-<img src='Images/inital_df_preview.png'><br>
+<p align="center">
+  <img src='Images/inital_df_preview.png'><br>
+</p> 
 <br>A look at the languages of each article: </br>
-<img src='Images/language_breakdown.png'><br>
-
+<p align="center">
+  <img src='Images/language_breakdown.png'><br>
+</p>
 After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 100k articles, still a pretty good size to train with.
 
 ## K-Means Clustering
@@ -32,7 +35,9 @@ In order to preprocess the text data for K-Means, a number of initial steps have
  </ul>
 To speed up training stages, I cut each article down to it's first 100 words to perform clustering, this comes from the assumption that the article's main idea should most likely come up early on in the text. After fitting a number of K-Means models, I settled on using the model with 12 clusters.
 <br><br>
-<img src='Images/kmeans12_cluster_distributions.png'><br>
+<p align="center">
+  <img src='Images/kmeans12_cluster_distributions.png'><br>
+</p>  
 ## K-Means (12) Clustering Results<br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
@@ -69,8 +74,9 @@ Looking through the article clusters, a number of things stand out:
 After noticing the size and proportion of cluster #3, I had the inclination to re cluster the rows within it. As it turns out, Each cluster created from cluster #3 was soley devoted around Donald Trump and the election. Because of this, I decided not to include my reclustering into my model, instead I left cluster #3 as it is. As it turns out, the top words for cluster #3 were misleading, although I reached an answer after digging deeper. This cluster still remains broad but it seems that it is centered politically as well.<br><br></b>
 
 ## Classification Models Using K-Means Clusters
-INSERT PICTURE OF ACCURACIES HERE
-
+<p align="center">
+  <img src='Images/classification_model_accuracies.png'><br>
+</p>
 ## Cosine-Similarity Text Summarizer
 
 ## Going Forward
