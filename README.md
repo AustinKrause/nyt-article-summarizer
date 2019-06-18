@@ -38,7 +38,7 @@ To speed up training stages, I cut each article down to it's first 100 words to 
 <p align="center">
   <img src='Images/kmeans12_cluster_distributions.png'><br>
 </p>  
-## K-Means (12) Clustering Results<br>
+<h2>K-Means (12) Clustering Results</h2><br>
 A preview of the top words in each cluster is below:<br> 
 <ul>
   <li><b>Cluster 0:</b> state, new, year, president, people, nation, one, unit, country, govern</li>
@@ -78,6 +78,13 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
   <img src='Images/classification_model_accuracies.png'><br>
 </p>
 <br>
-## Cosine-Similarity Text Summarizer
+<h2>Cosine-Similarity Text Summarizer</h2>
+
 
 ## Going Forward
+<ul>
+  <li>Adjust number of clusters to find "optimal" K-Means</li>
+  <li>Add more articles from non-political topics to the dataset to adjust class imbalance</li>
+  <li>Use summarizations to find cosine-similarity with other articles in the dataset</li>
+  <li>Add functionality to article scraper to support more news websites</li>
+</ul>
