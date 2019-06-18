@@ -1,7 +1,8 @@
 
-# TLDR; A News Article Summarization and Classification Tool
+<h1>TLDR; A News Article Summarization and Classification Tool</h1>
 Flatiron School Mod 5 Final Project
-## Project Goals:
+
+<h2>Project Goals:</h2>
 <ul>
   <li>Obtain news articles to analyze text data</li>
   <li>Utilize Natrural Language Tool Kit to preprocess text</li>
@@ -10,18 +11,20 @@ Flatiron School Mod 5 Final Project
   <li>Perform pairwise cosine similarity on an article from user input to obtain extractive text summarization</li>
 </ul>
 
-## Exploratory Data Analysis
+<h2>Exploratory Data Analysis</h2>
 Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
+
 <p align="center">
   <img src='Images/inital_df_preview.png'><br>
 </p> 
+
 <br>A look at the languages of each article: </br>
 <p align="center">
   <img src='Images/language_breakdown.png'><br>
 </p>
 After cutting out extrememly large and small articles along with non-English articles, I ended with a datset of just over 97k articles, still a pretty good size to train with.
 
-## K-Means Clustering
+<h2>K-Means Clustering</h2>
 <br>
 <b>Preprocessing</b><br>
 In order to preprocess the text data for K-Means, a number of initial steps have to be taken:<br>
@@ -55,7 +58,7 @@ A preview of the top words in each cluster is below:<br>
   <li><b>Cluster 11:</b> police, state, attack, kill, North Korea, Islam, Syria, president, military, force</li>
 </ul>  
 
-## Analyzing the Clusters
+<h2>Analyzing the Clusters</h2>
 Looking through the article clusters, a number of things stand out:
 <ul>
   <li>Clusters 0, 1 and 2 seems to be mainly political and it looks like clusters 1 and 2 mainly lean towards articles regarding the republication election campaign. Cluster 0 seems to be quite broad politically.</li>
@@ -73,15 +76,39 @@ Looking through the article clusters, a number of things stand out:
 <b>Further Clustering:<br>
 After noticing the size and proportion of cluster #3, I had the inclination to re cluster the rows within it. As it turns out, Each cluster created from cluster #3 was soley devoted around Donald Trump and the election. Because of this, I decided not to include my reclustering into my model, instead I left cluster #3 as it is. As it turns out, the top words for cluster #3 were misleading, although I reached an answer after digging deeper. This cluster still remains broad but it seems that it is centered politically as well.<br><br></b>
 
-## Classification Models Using K-Means Clusters
+<h2>Classification Models Using K-Means Clusters</h2>
 <p align="center">
   <img src='Images/classification_model_accuracies.png'><br>
 </p>
 <br>
+
+
 <h2>Cosine-Similarity Text Summarizer</h2>
+<p>
+  TF-IDF (Term Frequency - Inverse Document Frequency) gives weights to individual words based on their uniqueness compared to the document's overall vocabulary. Words with higher weights (more unique) often have more importance or provide more meaning to the document. To use this, I built a function that takes in an articles text, tokenizes each sentence (dataframe rows), creates a vocabulary without stopwords for the individual document (dataframe columns) and finally gives TF-IDF weights to each individual word in the vocab for each sentence. A preview is given below for a short text snippet. 
+</p>
 
+<p align="center">
+  <img src='Images/tf-idf_cosine_sim.png'><br>
+</p>
 
-## Going Forward
+<p>
+  Using the TF-IDF weights for each sentence, I convert each row into a vector and store them in a matrix. Next, I find the cosine-similarity of each TF-IDF vectorized sentence pair. An example of this is shown below for a news article:
+</p>
+
+<p align="center">
+  <img src='Images/sentence_cosine_similarities.png'><br>
+</p>
+
+<p>
+  Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest average. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
+</p>
+
+<p>
+  For simplicity, the amount of sentences that are returned for the summarization is equal to the square root of the number of sentences in the article. 
+</p>
+
+<h2>Going Forward</h2>
 <ul>
   <li>Adjust number of clusters to find "optimal" K-Means</li>
   <li>Add more articles from non-political topics to the dataset to adjust class imbalance</li>
