@@ -1,7 +1,7 @@
 <h1>TLDR: A News Article Summarization and Classification Tool</h1>
 <p align = "center">
   Link to video demonstration<br>
-<a href="https://www.youtube.com/watch?v=g7S-0mEXmek&feature=youtu.be">
+<a href="https://www.youtube.com/watch?v=g7S-0mEXmek&feature=youtu.be" target = "_blank">
   <img src = "Images/youtube_logo.jpg" alt="Youtube Link" height=200 width = 200>
 </a>
 </p>
