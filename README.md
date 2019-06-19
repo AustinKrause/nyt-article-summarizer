@@ -1,6 +1,4 @@
 <h1>TLDR: A News Article Summarization and Classification Tool</h1>
-Flatiron School Mod 5 Final Project
-
 <p align = "center">
   Link to video demonstration<br>
 <a href="https://www.youtube.com/watch?v=g7S-0mEXmek&feature=youtu.be">
