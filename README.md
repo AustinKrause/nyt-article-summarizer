@@ -1,6 +1,9 @@
 <h1>TLDR: A News Article Summarization and Classification Tool</h1>
 Flatiron School Mod 5 Final Project
 
+[![YouTube Link](youtube_logo.png)](https://www.youtube.com/watch?v=g7S-0mEXmek&feature=youtu.be "TLDR Demonstration")
+
+
 <h2>Project Goals:</h2>
 <ul>
   <li>Obtain news articles to analyze text data</li>
