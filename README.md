@@ -130,7 +130,7 @@ Finally, after finding the cosine-similarity for all vectorized pairs, I average
   <img src='Images/summary_example_output.png'><br><br>
 </p>
 <p>
-  Looking at the output, I show a list of sentences that were selected by the summarization tool to be extracted from the original text. The number 7 represents that this article was placed into cluster #7 (court articles). The number 28 represents the number of total sentences in the original article. And finally, we see the extractive summarization and it came out beautifully! 
+  Looking at the output, I show a list of sentence indexes that were selected by the summarization tool to be extracted from the original text. The number 28 represents the number of total sentences in the original article. The number 7 represents that this article was placed into cluster #7 (court articles). And finally, we see the extractive summarization and it came out beautifully! 
 
 <h2>Going Forward</h2>
 <ul>
