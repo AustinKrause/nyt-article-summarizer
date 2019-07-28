@@ -113,7 +113,7 @@ After noticing the size and proportion of cluster #3, I had the inclination to r
 </p>
 
 <p>
-Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest averages. These indexes are then used to pull out the the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
+Finally, after finding the cosine-similarity for all vectorized pairs, I average the weights of each vector, and return the indexes of the vectors with the highest averages. These indexes are then used to pull out the sentences from the original text for the summarization. To see the full function, head over to the new_user_functions notebook. 
 </p>
 
 <p>
