@@ -11,7 +11,7 @@
   <li>Utilize Natrural Language Tool Kit to preprocess text</li>
   <li>Train K-Means Clustering algorithm to segment groups of news articles based on similarities in text content</li>
   <li>Train supervised classification algorithms to predict which cluster a new article would fall closest to</li>
-  <li>Perform pairwise cosine similarity on an article from user input to obtain extractive text summarization</li>
+  <li>Perform pairwise cosine similarity on an article from user input to obtain extractive text summarization to give the reader a quick view of the main points of the article</li>
 </ul>
 
 <h2>Dataset Analysis</h2>
