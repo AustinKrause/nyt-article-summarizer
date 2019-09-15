@@ -15,7 +15,7 @@
 </ul>
 
 <h2>Dataset Analysis</h2>
-Data was obtained from Components.com, it included over 200k news articles from 2013-2017 coming from different news outlets.<br> 
+Data was obtained from Components.com, it includes over 200k news articles from 2013-2017 coming from different news outlets.<br> 
 
 <p align="center">
   Preview of dataframe<br>
